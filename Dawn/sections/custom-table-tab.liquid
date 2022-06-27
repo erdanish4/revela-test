@@ -1,0 +1,124 @@
+<!--Tabs Start-->
+<div class="clear"></div>
+<div class="tab-wrap">
+    <div class="special-text">Get Revela</div>
+ 	<h2 class="theme-heading">Learn about out charts</h2>
+    <div class="tab">
+      <button class="tablinks active" onclick="openTabs(event, 'FirstTab')">FirstTab</button>
+      <button class="tablinks" onclick="openTabs(event, 'SecondTab')">SecondTab</button>
+      <button class="tablinks" onclick="openTabs(event, 'ThirdTab')">ThirdTab</button>
+      <div class="tab-content-wrap">  
+        <div class="tabcontent">
+          <h3>FirstTab</h3>
+        </div>
+
+        <div class="tabcontent">
+          <h3>SecondTab</h3>
+        </div>
+
+        <div class="tabcontent">
+          <h3>ThirdTab</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Tab content -->
+    <div class="tab-content-wrap tab-description">
+      <div class="FirstTab tabcontent">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+
+      <div class="SecondTab tabcontent">
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical/p>
+      </div>
+
+      <div class="ThirdTab tabcontent">
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
+      </div>      
+    </div>
+  	<div class="tab-content-wrap tab-description">
+      <div class="FirstTab tabcontent">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+
+      <div class="SecondTab tabcontent">
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical/p>
+      </div>
+
+      <div class="ThirdTab tabcontent">
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
+      </div>      
+    </div>
+  	<div class="tab-content-wrap tab-description">
+      <div class="FirstTab tabcontent">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+
+      <div class="SecondTab tabcontent">
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical/p>
+      </div>
+
+      <div class="ThirdTab tabcontent">
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
+      </div>      
+    </div>
+</div>
+<!--Tabs Ends-->
+
+<script> 
+var winWidth = $(window).width();
+  
+function openTabs(evt, tabName) {
+   var i, tabcontent, tablinks;
+  	$('.tablinks').removeClass('active');
+   	$('.tabcontent').hide();
+    $("."+tabName).show(); 
+    
+ 
+}
+ $(window).resize(function(){
+   var winWidth = $(window).width();
+   if(winWidth > 767){
+      $('.tabcontent').removeAttr("style");
+   }
+ });
+
+
+</script>
+
+{% schema %}
+  {
+    "name": "Custom Table Tab",
+    "settings": [],
+	"presets": [
+    	{
+      	"name": "Custom Table Tab"
+   	 	}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+.tab {
+    margin-top: 30px;
+}
+.tab-wrap{
+	max-width:1100px;
+	display:block;
+ 	margin:0px auto 80px;
+}
+.clear{clear:both;}
+
+.tab-wrap .special-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 0px;
+    display: inline-block;
+    margin-bottom: 0px;
+    color: #d7ae5a;
+    text-align: center;
+    width: 100%;
+}
+{% endstylesheet %}

@@ -1,0 +1,385 @@
+/*
+	Main Banner Responsive CSS
+*/
+
+@media only screen and (min-width: 1200px) {
+    .wa_main_bn_wrap figcaption h2 {
+        font-size: 42px;
+    }
+    .wa_main_bn_wrap figcaption span {
+        font-size: 32px;
+    }
+    .wa_main_bn_wrap figcaption span:before {
+        bottom: -6px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .wa_main_bn_wrap figcaption span.special-text {
+      font-size: 2em;
+  }
+
+  .wa_main_bn_wrap figcaption h2 {
+      font-size: 2em;
+      max-width: 400px;
+  }
+  .wa_main_bn_wrap figcaption p {
+  	max-width: 400px;
+  }
+  .wa_main_bn_wrap figure figcaption {
+      margin: 0;
+      padding: 0 10%;
+      top: 15%;
+  }
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+
+    .owl-carousel-style1 .owl-buttons div {
+        float: none;
+        margin-right: 5px;
+    }
+    .owl-carousel-style1 .owl-buttons {
+        left: 0;
+        width: 100%;
+        top: 102%;
+        text-align: left;
+        position: relative;
+        padding: 10px 15px;
+    }
+    .wa-partners .owl-buttons {
+        #padding-left: 5px;
+        #padding-top: 5px;
+    }
+
+    .wa_main_bn_wrap .owl-theme .owl-pagination {
+        bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .pad-s30 {
+        padding: 0px 30px;
+    }
+    .pad-s15 {
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .marB-s30 {
+        margin-bottom: 30px;
+    }
+
+    .special-style {
+        width: 100%;
+    }
+    .owl-carousel-style1 .owl-buttons div {
+        float: none;
+        margin-right: 5px;
+    }
+    .owl-carousel-style1 .owl-buttons {
+        left: 0;
+        width: 100%;
+        top: 102%;
+        text-align: left;
+        position: relative;
+        padding: 10px 15px;
+    }
+    .wa_main_bn_wrap .owl-theme .owl-pagination {
+        bottom: 10px;
+    }
+    .special-area-widthfull {
+        width: 100%;
+    }
+	.dark-button,
+	.wa-button{
+		margin-bottom:5px;
+	}
+  
+  .wa_main_bn_wrap img {
+      height: 500px;
+      object-fit: cover;
+      object-position: -180px 0px;
+  }
+
+  .wa_main_bn_wrap figcaption span.special-text {
+      font-size: 2em;
+  }
+
+  .wa_main_bn_wrap figcaption h2 {
+      font-size: 2em;
+      max-width: 300px;
+  }
+  .wa_main_bn_wrap figcaption p {
+  	max-width: 300px;
+  }
+  .wa_main_bn_wrap figure figcaption {
+      margin: 0;
+      padding: 0 7.5%;
+      top: 15%;
+  }
+
+  .wa_main_bn_wrap .owl-nav {
+      position: absolute;
+      bottom: -24px;
+      right: 50%;
+      width: 120px;
+      margin-bottom: 50px;
+      margin-right: -60px;
+  }
+
+  .wa_main_bn_wrap .owl-theme .owl-dots{
+      display:none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wa_main_bn_wrap img {
+      min-height: 380px;
+      object-fit: cover;
+      opacity: 0.7;
+  }
+
+  .wa_main_bn_wrap figcaption span.special-text {
+      font-size: 2em;
+  }
+
+  .wa_main_bn_wrap figcaption h2 {
+      font-size: 2em;
+  }
+  .wa_main_bn_wrap figure figcaption {
+      margin: 0;
+      padding: 0 7.5%;
+      top: 15%;
+  }
+
+  .wa_main_bn_wrap .owl-nav {
+      position: absolute;
+      bottom: -24px;
+      right: 50%;
+      width: 120px;
+      margin-bottom: 50px;
+      margin-right: -60px;
+  }
+
+  .wa_main_bn_wrap .owl-theme .owl-dots{
+      display:none;
+  }
+}
+@media only screen and (max-width: 575px) {
+	.wa_main_bn_wrap img {
+      object-position: -294px 0px;
+  }
+  section.wa_sale_counter_wrap h2.theme-heading {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 600px) {
+  section.wa_sale_counter_wrap .container {
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  }  
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .pad-s30 {
+        padding: 0px 30px;
+    }
+    .pad-s15 {
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .marB-s30 {
+        margin-bottom: 30px;
+    } 
+   
+    .special-style {
+        width: 100%;
+    }
+    .row.owl-carousel {
+        margin: 0px;
+    }
+    .owl-carousel-style1 .owl-buttons div {
+        float: none;
+        margin-right: 5px;
+    }
+    .owl-carousel-style1 .owl-buttons {
+        left: 0;
+        width: 100%;
+        top: 102%;
+        text-align: left;
+        position: relative;
+        padding: 10px 15px;
+    }    
+    
+    .wa_main_bn_wrap figcaption span,
+    .wa_main_bn_wrap figcaption p,
+    .wa_main_bn_wrap .owl-pagination {
+        display: none;
+    }
+    .wa_main_bn_wrap figcaption h2 span {
+        display: block;
+        line-height: inherit;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .wa_main_bn_wrap figcaption h2 {
+        font-size: 30px;
+    }
+    .wa_main_bn_wrap figure figcaption {
+        margin: 0px;
+        padding: 0px 15%;
+        top: 20%;
+    }
+    .wa_main_bn_wrap .owl-buttons {
+        bottom: 72%;
+        width: 100%;
+    }
+    .wa_main_bn_wrap .owl-theme .owl-pagination {
+        bottom: 10px;
+    }
+    .marLessT150 {
+        margin-top: 0px;
+    }
+	.dark-button{
+		margin-bottom:5px;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {    
+    .pad-s30 {
+        padding: 0px 30px;
+    }
+    .pad-s15 {
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .marB-s30 {
+        margin-bottom: 30px;
+    }
+    .special-style {
+        width: 100%;
+    }
+    .row.owl-carousel {
+        margin: 0px;
+    }
+    .owl-carousel-style1 .owl-buttons div {
+        float: none;
+        margin-right: 5px;
+    }
+    .owl-carousel-style1 .owl-buttons {
+        left: 0;
+        width: 100%;
+        top: 102%;
+        text-align: left;
+        position: relative;
+        padding: 10px 15px;
+    }
+    .wa_main_bn_wrap figcaption span,
+    .wa_main_bn_wrap figcaption p,
+    .wa_main_bn_wrap .wa-button,
+    .wa_main_bn_wrap .owl-pagination {
+        display: none;
+    }
+    .wa_main_bn_wrap figcaption h2 span {
+        display: block;
+        line-height: inherit;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+   
+    .wa_main_bn_wrap .owl-buttons {
+        bottom: 72%;
+        width: 100%;
+    }
+    .wa_main_bn_wrap .owl-theme .owl-pagination {
+        bottom: 10px;
+    }
+    .marLessT150 {
+        margin-top: 0px;
+    }    
+	.dark-button{
+		margin-bottom:5px;
+	}
+}
+
+/*
+	Custom Table Tab Responsive CSS
+*/
+
+@media screen and (min-width: 768px){
+  .tab .tab-content-wrap .tabcontent{
+    background:#d7ae5a;
+  }
+  .tab-description{
+  	background:#f1ece2;
+  }
+  .tablinks{
+  	display:none;
+  }
+  .tab .tab-content-wrap{
+  	border-bottom: 0px solid #cecece;}
+  .tab-content-wrap{
+  display:flex;
+  justify-content: space-around;
+    border: 1px solid #000;
+}
+  .tab .tab-content-wrap .tabcontent h3,.tab-content-wrap .tabcontent p{
+  color:#000;
+  }
+  .tabcontent {
+    width: 100%;
+     padding: 0 15px;
+}
+  .tabcontent:nth-child(2) {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+ 
+}
+@media screen and (max-width: 767px){
+  .tab {
+    overflow: hidden;
+    border: 1px solid #000;
+    background-color: #d7ae5a;
+  }
+  .tab-wrap {
+    
+    padding: 0px 15px;
+}
+
+  .tabcontent:first-child {
+    display: block;
+}
+
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab .tablinks.active,
+  .tab button:hover {
+    background-color: #000;
+    color:#fff;
+  }
+
+  /* Create an active/current tablink class */
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color:#f1ece2;
+  }
+  .tab .tab-content-wrap{
+  	display:none;
+  }
+}

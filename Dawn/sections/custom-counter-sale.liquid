@@ -1,0 +1,146 @@
+<!--//=======Sale Counter Start=======// -->
+<section class="wa_sale_counter_wrap">
+  <div class="special-text">Hurray!</div>
+  <h2 class="theme-heading">Sales Begin's at GetRevela</h2>
+  <!--continer-->
+  <div class="container">
+    <div class="timer">
+      <h3 id="day">00</h3>
+      <p>Days</p>
+    </div>
+    <div class="timer">
+      <h3 id="hour">00</h3>
+      <p>Hours</p>
+    </div>
+    <div class="timer">
+      <h3 id="minute">00</h3>
+      <p>Minutes</p>
+    </div>
+    <div class="timer">
+      <h3 id="second">00</h3>
+      <p>Seconds</p>
+    </div>
+  </div>
+  <!--/continer-->
+
+  <h2 class="heading"></h2>
+</section>
+<!--//=======Sale Counter End=======//--> 
+{% schema %}
+  {
+    "name": "Custom Counter Sale",
+    "settings": [],
+	"presets": [
+    {
+      "name": "Custom Counter Sale"
+    }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+section.wa_sale_counter_wrap {
+  background: url("https://cdn.shopify.com/s/files/1/0628/1487/9929/t/1/assets/countdown-img.jpg?v=126241581540083754701656313045")
+    no-repeat center;
+  background-size: cover;
+  position: relative;
+  margin: 8rem 0;
+}
+
+section.wa_sale_counter_wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #d7ae5a8a;
+}
+
+section.wa_sale_counter_wrap .special-text {
+    font-family: Great Vibes,cursive;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 0;
+    display: inline-block;
+    margin-bottom: 0;
+    color: #000;
+    text-align: center;
+    width: 100%;
+	padding-top: 7rem;
+}
+section.wa_sale_counter_wrap h2.theme-heading {
+    color: #fff;
+    z-index: 9;
+    position: relative;
+	padding-bottom: 2rem;
+}
+
+section.wa_sale_counter_wrap .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: center;
+  max-width: 1100px;
+  margin-inline: auto;
+  position: relative;
+  margin-top:50px;
+  padding-bottom:10rem;
+}
+
+section.wa_sale_counter_wrap .timer {
+  text-align: center;
+}
+
+section.wa_sale_counter_wrap .timer h3 {
+  color: #d7ae5a;
+  font-size: clamp(3rem,2.5rem,2rem);
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 50%;
+  line-height: 65px;
+}
+section.wa_sale_counter_wrap .timer p {
+  color: #ffffff;
+  font-size: clamp(3rem,2rem,1rem);
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-weight: 600;
+}
+{% endstylesheet %}
+
+{% javascript %}
+let saleDate = new Date("07/01/2022"); // set sale counter
+let seconds = 1000;
+let minutes = 60 * seconds;
+let hours = 60 * minutes;
+let days = 24 * hours;
+let timer = setInterval(updateTimer, seconds);
+
+function updateTimer() {
+  let today = new Date();
+  let diffrence = saleDate - today;
+  if (diffrence <= -days) {
+    document.querySelector("h2").innerHTML = "Had a nice Sale";
+    clearInterval(timer);
+    return;
+  } else if (diffrence <= 0) {
+    document.querySelector("h2").innerHTML = "Happy Birthday!";
+    clearInterval(timer);
+    return;
+  }
+  //=========== get day hours minutes seconds
+  let d = Math.floor(diffrence / days);
+  let h = Math.floor((diffrence % days) / hours);
+  let m = Math.floor((diffrence % hours) / minutes);
+  let s = Math.floor((diffrence % minutes) / seconds);
+  document.querySelector("#day").textContent = d;
+  document.querySelector("#hour").textContent = h;
+  document.querySelector("#minute").textContent = m;
+  document.querySelector("#second").textContent = s;
+}
+{% endjavascript %}
