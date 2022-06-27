@@ -1,0 +1,176 @@
+<div class="wa_carousel_bn_wrap">
+    <div class="special-text">Get Revela</div>
+ 	<h2 class="theme-heading">Learn about ingredients</h2>
+  	<div id="product-carousel" class="owl-carousel owl-theme">
+      	<div class="item">
+          <figure>
+            {{ 'img-carusel-1.jpg' | asset_url | img_tag: shop.name }}  
+            <figcaption>
+              <h2><span class="wa-theme-color">Clean beauty </span> is dirtier than you think</span></h2>
+              <p>Our proprietary ProCelinyl™ delivers visible results in just 6 weeks. No shedding required.</p>
+            </figcaption>
+          </figure>
+      	</div>
+      
+      	<div class="item">
+          <figure>
+            {{ 'img-carusel-2.jpg' | asset_url | img_tag: shop.name }}  
+            <figcaption>
+              <h2><span class="wa-theme-color">Finasteride:</span>  of Side Effects</h2>
+              <p>Our proprietary ProCelinyl™ delivers visible results in just 6 weeks. No shedding required.</p>
+            </figcaption>
+          </figure>
+      	</div>
+      
+      	<div class="item">
+          <figure>
+            {{ 'img-carusel-3.jpg' | asset_url | img_tag: shop.name }}  
+            <figcaption>
+              <h2><span class="wa-theme-color">Your hair</span> deserves new <span class="wa-theme-color"> innovation</span></h2>
+              <p>Our proprietary ProCelinyl™ delivers visible results in just 6 weeks. No shedding required.</p>
+            </figcaption>
+          </figure>
+      	</div>
+  
+      	<div class="item">
+          <figure>
+            {{ 'img-carusel-1.jpg' | asset_url | img_tag: shop.name }}  
+            <figcaption>
+              <h2><span class="wa-theme-color">Clean beauty </span> is dirtier than you think</span></h2>
+              <p>Our proprietary ProCelinyl™ delivers visible results in just 6 weeks. No shedding required.</p>
+            </figcaption>
+          </figure>
+      	</div>
+      
+      	<div class="item">
+          <figure>
+            {{ 'img-carusel-2.jpg' | asset_url | img_tag: shop.name }}  
+            <figcaption>
+              <h2><span class="wa-theme-color">Finasteride:</span>  of Side Effects</h2>
+              <p>Our proprietary ProCelinyl™ delivers visible results in just 6 weeks. No shedding required.</p>
+            </figcaption>
+          </figure>
+      	</div>
+      
+      	<div class="item">
+          <figure>
+            {{ 'img-carusel-3.jpg' | asset_url | img_tag: shop.name }}  
+            <figcaption>
+              <h2><span class="wa-theme-color">Your hair</span> deserves new <span class="wa-theme-color"> innovation</span></h2>
+              <p>Our proprietary ProCelinyl™ delivers visible results in just 6 weeks. No shedding required.</p>
+            </figcaption>
+          </figure>
+      	</div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom Carousel",
+    "settings": [],
+	"presets": [
+   	 			{
+      			"name": "Custom Carousel"
+   				 }
+ 	 ]
+  }
+{% endschema %}
+
+{% stylesheet %}  
+  .wa_carousel_bn_wrap{  
+    display:block;
+    margin:0 auto;
+    max-width:1160px;
+    padding: 60px 0px;
+  }
+  .wa_carousel_bn_wrap .owl-item .item{
+    padding:30px;
+    margin:0px 0px; 
+    box-shadow: 0px 12px 25px 0px #00000026;
+    margin:30px 10px;
+  }
+  .wa_carousel_bn_wrap figure {
+    margin: 0;
+  }
+
+  .wa_carousel_bn_wrap .owl-stage-outer .owl-item{
+    padding:0px 15px;   
+  }
+  .wa_carousel_bn_wrap .special-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 0px;
+    display: inline-block;
+    margin-bottom: 0px;
+     color: #d7ae5a;
+    text-align: center;
+    width: 100%;
+}
+  .wa_carousel_bn_wrap .owl-item h2{  
+    margin-top:25px;
+  	margin-bottom:0px;
+  }
+  .wa_carousel_bn_wrap .owl-item p{
+  	margin-top:5px;
+    margin-bottom:0px;
+  }
+  .theme-heading{
+  	font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    font-size: 42px;
+    margin-top: 10px;
+    text-align: center;
+  }
+.wa_carousel_bn_wrap .owl-theme .owl-dots .owl-dot span {
+    width: 14px;
+    height: 14px;
+    border: 2px solid;
+    border-radius: 100%;
+    margin: 0 4px;
+    background-color: white;
+    display: inline-block;
+    opacity: 1;
+}
+ .wa_carousel_bn_wrap .owl-theme .owl-dots .owl-dot.active span{
+    background-color: #d7ae5a;
+ }
+.wa_carousel_bn_wrap .owl-theme .owl-dots {
+    bottom: -30px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 22;
+}
+{% endstylesheet %}
+
+{% javascript %}
+		var ProductCarousel = $('#product-carousel');
+        if (ProductCarousel.length>0) { 
+              ProductCarousel.owlCarousel({
+				autoplay:true,
+				autoplayTimeout:5000,
+                loop:true,
+                margin:0,
+                nav:false,
+                dots:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
+                }
+            });
+          }
+{% endjavascript %}
